@@ -7,7 +7,7 @@
 }
 
 :root[data-theme="light"] {
-    --brand-primary: #0768AC;
+    --brand-primary: 7, 104, 172;
     --brand-secondary: #03C180;
     --bg_default: #FFFFFF;
     --bg_body: #F0F9FF;
@@ -44,6 +44,9 @@ body {
     height: 70px;
     background-color: var(--bg_default);
     padding: 0.5rem 100px;
+    position: sticky;
+    top: 0;
+    z-index: 999999;
 }
 
 .header-btns {
@@ -53,7 +56,7 @@ body {
 }
 
 .header .logo {
-    color: var(--brand-primary);
+    color: rgb(var(--brand-primary));
 }
 
 .header-btns .btn {
@@ -90,13 +93,14 @@ body {
 /* Styling the banner */
 
 section.main-banner {
-    height: 200px;
+    height: 150px;
     background-color: var(--bg_default);
     position: relative;
     z-index: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
 }
 
 section.main-banner::before {
@@ -104,9 +108,9 @@ section.main-banner::before {
     position: absolute;
     width: 100%;
     height: 100%;
-    clip-path: polygon(0% 0%, 80% 0%, 0% 50%);
+    clip-path: polygon(0% 0%, 90% 0%, 0% 45%);
     z-index: 999;
-    background-image: linear-gradient(to right, var(--brand-primary), #079e7e 99.5%);
+    background-image: linear-gradient(to right, rgb(var(--brand-primary)), #079e7e 99.5%);
     top: 0;
     left: 0;
 }
@@ -116,7 +120,7 @@ section.main-banner::after {
     position: absolute;
     width: 100%;
     height: 100%;
-    clip-path: polygon(100% 0%, 50% 0%, 100% 50%);
+    clip-path: polygon(100% 0%, 10% 0%, 100% 45%);
     z-index: 888;
     background-image: linear-gradient(to left, var(--brand-secondary), #02bf83);
     top: 0;
@@ -134,4 +138,20 @@ section.main-banner .banner-text .welcome-text {
     font-weight: 700;
     font-size: 1.5rem;
     color: var(--brand-secondary);
+}
+
+@media screen and (max-width: 600px) {
+    section.main-banner::before {
+        clip-path: polygon(0% 0%, 80% 0%, 0% 20%);
+    }
+
+    section.main-banner::after {
+        clip-path: polygon(100% 0%, 50% 0%, 100% 20%);
+    }
+}
+
+/* Styling main content */
+.main-content {
+    background-color: rgba(var(--brand-primary), 0.1);
+    min-height: 100vh;
 }
