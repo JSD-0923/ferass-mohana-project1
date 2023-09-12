@@ -42,26 +42,28 @@
     <main class="main-content" aria-label="The main content of website, product will be visible below">
         <section class="search-filter-section">
             <input type="search" class="search-input" placeholder="Search the website...">
-            <div class="select-container">
-                <button class="select-btn">
-                    <span class="select-btn-title">Sort by:</span>
-                    <span class="select-btn-text" id="sort">dummy1</span>
-                </button>
-                <div class="list-container" id="sort-container">
-                    <button>dummy1</button>
-                    <button>dummy2</button>
-                    <button>dummy3</button>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr);">
+                <div class="select-container">
+                    <button class="select-btn">
+                        <span class="select-btn-title">Sort by:</span>
+                        <span class="select-btn-text" id="sort">dummy1</span>
+                    </button>
+                    <div class="list-container" id="sort-container">
+                        <button>dummy1</button>
+                        <button>dummy2</button>
+                        <button>dummy3</button>
+                    </div>
                 </div>
-            </div>
-            <div class="select-container rounded">
-                <button class="select-btn">
-                    <span class="select-btn-title">Filter by:</span>
-                    <span class="select-btn-text" id="filter">dummy1</span>
-                </button>
-                <div class="list-container" id="filter-container">
-                    <button>dummy1</button>
-                    <button>dummy2</button>
-                    <button>dummy3</button>
+                <div class="select-container rounded">
+                    <button class="select-btn">
+                        <span class="select-btn-title">Filter by:</span>
+                        <span class="select-btn-text" id="filter">dummy1</span>
+                    </button>
+                    <div class="list-container" id="filter-container">
+                        <button>dummy1</button>
+                        <button>dummy2</button>
+                        <button>dummy3</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -69,7 +71,7 @@
             <span id="results-number">"24"</span>web topic found
         </p>
         <section class="cards show-results">
-            <div class="card result">
+            <a href="#" class="card result">
                 <div class="img-container">
                     <img src="./Logos/html.png" alt="Accessibility image">
                 </div>
@@ -109,9 +111,12 @@
                         Author: <span class="author">Sarah Smith</span>
                     </p>
                 </div>
-            </div>
+            </a>
         </section>
     </main>
+    <footer class="footer">
+        <p>Developed with <span style="color: #e0103d;">&#10084;</span> &#169; 2023 </p>
+    </footer>
 </body>
 
 </html>

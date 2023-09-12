@@ -30,6 +30,11 @@
 
 body {
     font-family: 'Nunito Sans', sans-serif;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 70px 150px 1fr 50px;
+    background-color: rgba(var(--brand-primary), 0.1);
+    color: var(--body-text);
 }
 
 :link {
@@ -152,14 +157,13 @@ section.main-banner .banner-text .welcome-text {
 
 /* Styling main content */
 .main-content {
-    background-color: rgba(var(--brand-primary), 0.1);
     padding: 1rem 5rem;
 }
 
 /* Styling the search-filter section */
 .search-filter-section {
     display: grid;
-    grid-template-columns: 1fr 150px 150px;
+    grid-template-columns: 1fr 300px;
     align-items: center;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
@@ -264,6 +268,15 @@ section.main-banner .banner-text .welcome-text {
     overflow: hidden;
     background-color: var(--bg_default);
     box-shadow: 0px 0px 15px var(--box-shadow);
+    transition: 0.3s all;
+}
+
+.card:hover {
+    transform: translateY(-0.25em);
+}
+
+.card:active {
+    transform: translateY(0);
 }
 
 .card img {
@@ -293,18 +306,62 @@ section.main-banner .banner-text .welcome-text {
     font-weight: 700;
     font-size: 20px;
 }
+
 /* rating style */
-.rating{
+.rating {
     display: flex;
     align-items: center;
     gap: 5px;
     margin-top: auto;
 }
-.rating svg{
+
+.rating svg {
     fill: gold;
 }
+
 /* Author */
-.author{
+.author {
     color: #888888;
     margin-top: auto;
+}
+
+@media screen and (max-width: 1024px) {
+    .show-results {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 821px) {
+    .show-results {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .show-results {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+
+    .search-filter-section {
+        grid-template-columns: 1fr;
+    }
+
+    .search-filter-section input {
+        border-bottom: 1px solid var(--lines-color);
+        border-bottom-left-radius: 0;
+    }
+
+    .select-container:not(.rounded) {
+        border-left: unset;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
