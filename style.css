@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    background-color: #fff;
+    padding: 0.5rem 100px;
+}
+.header-btns{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.header-btns .btn{
+    border: 0;
+    outline: 1px solid #ddd;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    width: 100px;
+    border-radius: 5px;
+}
