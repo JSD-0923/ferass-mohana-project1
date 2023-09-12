@@ -9,10 +9,11 @@
 </head>
 
 <body>
-    <header class="header">
-        <a href="#" class="logo">Web Topics</a>
+    <!-- Header -->
+    <header class="header" aria-label="The header component">
+        <a href="#" class="logo" aria-label="Website logo">Web Topics</a>
         <div class="header-btns">
-            <button class="btn dark">
+            <button class="btn dark" tabindex="0" role="button" aria-label="toggle theme button">
                 <svg xmlns="http://www.w3.org/2000/svg" height="1em"
                     viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                     <path
@@ -20,7 +21,7 @@
                 </svg>
                 <span>Dark Mode</span>
             </button>
-            <button class="btn favourite">
+            <button class="btn favourite" tabindex="1" role="button" aria-label="Get Favourite product">
                 <svg xmlns="http://www.w3.org/2000/svg" height="1em"
                     viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                     <path
@@ -30,6 +31,13 @@
             </button>
         </div>
     </header>
+    <!-- Banner -->
+    <section class="main-banner" aria-label="The main banner of website">
+        <div class="banner-text" aria-label="Division contain Welcoming text">
+            <span class="welcome-text">Welcome to our website!</span>
+            <span class="breif-text">We have a new design that's fresh, modern, and easy to use.</span>
+        </div>
+    </section>
 </body>
 
 </html>
