@@ -681,7 +681,7 @@ select option:checked {
     opacity: 0.5;
 }
 
-@media (max-width: 821px) {
+@media (max-width: 1024px) {
     .course-card {
         padding: 1rem 2vw;
     }
