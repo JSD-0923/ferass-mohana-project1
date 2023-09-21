@@ -173,7 +173,6 @@ section.main-banner .banner-text .welcome-text {
     align-items: center;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
@@ -201,6 +200,12 @@ section.main-banner .banner-text .welcome-text {
 .select-container {
     background-color: var(--bg_default);
     border-left: 1px solid var(--lines-color);
+    position: relative;
+}
+
+.select-container.rounded {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .select-container .select-btn {
@@ -257,7 +262,56 @@ section.main-banner .banner-text .welcome-text {
 }
 
 .list-container {
-    display: none;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    top: -70px;
+    transition: 0.2s all;
+    position: absolute;
+}
+
+.list-container button {
+    display: block;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    color: var(--body-text);
+    background-color: unset;
+    padding: 1rem 0.5rem;
+    transition: 0.2s all;
+    cursor: pointer;
+}
+
+.list-container button:hover {
+    background-color: var(--lines-color);
+}
+
+.select-container.active .list-container {
+    display: block;
+    width: 100%;
+    max-height: fit-content;
+    top: 70px;
+    left: 0;
+    background-color: var(--bg_default);
+    opacity: 1;
+    overflow: auto;
+}
+
+select {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    color: var(--body-text);
+    background-color: var(--bg_default);
+}
+
+select option {
+    color: var(--body-text);
+}
+
+select option:checked {
+    background-color: var(--bg_body);
 }
 
 /* search-results styling */

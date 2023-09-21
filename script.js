@@ -25,7 +25,16 @@ dark_btn.addEventListener("click", () => {
 })
 
 document.addEventListener("click", (event) => {
-    if(event.target.classList.contains("select-btn-text")){
+    if (event.target.classList.contains("select-btn-text")) {
         event.target.closest('.select-container').classList.toggle("active");
+    }
+})
+
+document.addEventListener("click", (event)=>{
+    if(event.target.classList.contains("list_btn")){
+        let parent = event.target.parentNode;
+        let prevSibling = parent.previousElementSibling;
+        prevSibling.querySelector(".select-btn-text").textContent = event.target.textContent;
+        parent.parentNode.classList.remove("active")
     }
 })

@@ -44,26 +44,25 @@
             <input type="search" class="search-input" placeholder="Search the website...">
             <div style="display: grid; grid-template-columns: repeat(2, 1fr);">
                 <div class="select-container">
-                    <button class="select-btn">
+                    <button class="select-btn" id="sort_btn">
                         <span class="select-btn-title">Sort by:</span>
                         <span class="select-btn-text" id="sort">dummy1</span>
                     </button>
                     <div class="list-container" id="sort-container">
-                        <button>dummy1</button>
-                        <button>dummy2</button>
-                        <button>dummy3</button>
+                        <button class="list_btn">dummy1</button>
+                        <button class="list_btn">dummy2</button>
+                        <button class="list_btn">dummy3</button>
                     </div>
                 </div>
                 <div class="select-container rounded">
                     <button class="select-btn">
                         <span class="select-btn-title">Filter by:</span>
-                        <span class="select-btn-text" id="filter">dummy1</span>
+                        <select name="" id="">
+                            <option value="1">dummy1</option>
+                            <option value="2">dummy2</option>
+                            <option value="3">dummy3</option>
+                        </select>
                     </button>
-                    <div class="list-container" id="filter-container">
-                        <button>dummy1</button>
-                        <button>dummy2</button>
-                        <button>dummy3</button>
-                    </div>
                 </div>
             </div>
         </section>
