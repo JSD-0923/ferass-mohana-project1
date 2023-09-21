@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-:root[data-theme="light"] {
+:root {
     --brand-primary: 7, 104, 172;
     --brand-secondary: #03C180;
     --bg_default: #FFFFFF;

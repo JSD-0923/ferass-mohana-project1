@@ -8,8 +8,6 @@ const favourite_btn = document.querySelector(".favourite");
 
 const dark_btn = document.querySelector(".dark");
 
-localStorage.setItem("theme-data", "light");
-
 favourite_btn.addEventListener("click", () => {
     favourite_courses.classList.toggle("active");
 })
@@ -23,15 +21,20 @@ dark_btn.addEventListener("click", () => {
         localStorage.setItem("theme-data", "light");
     }
 })
-
+window.addEventListener('load', () => {
+    const savedTheme = localStorage.getItem('theme-data');
+    if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+});
 document.addEventListener("click", (event) => {
     if (event.target.classList.contains("select-btn-text")) {
         event.target.closest('.select-container').classList.toggle("active");
     }
 })
 
-document.addEventListener("click", (event)=>{
-    if(event.target.classList.contains("list_btn")){
+document.addEventListener("click", (event) => {
+    if (event.target.classList.contains("list_btn")) {
         let parent = event.target.parentNode;
         let prevSibling = parent.previousElementSibling;
         prevSibling.querySelector(".select-btn-text").textContent = event.target.textContent;
