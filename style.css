@@ -304,10 +304,12 @@ select {
     font-size: 18px;
     color: var(--body-text);
     background-color: var(--bg_default);
+    cursor: pointer;
 }
 
 select option {
     color: var(--body-text);
+    cursor: pointer;
 }
 
 select option:checked {
@@ -466,7 +468,7 @@ select option:checked {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     gap: 30px;
-    max-height: 250px;
+    max-height: 200px;
     overflow: auto;
     padding: 1rem 3rem;
 }
