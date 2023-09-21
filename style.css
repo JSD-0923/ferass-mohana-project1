@@ -365,3 +365,98 @@ section.main-banner .banner-text .welcome-text {
     justify-content: center;
     align-items: center;
 }
+
+/* Styling favourite section */
+
+.favourite_courses {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background-color: #fff;
+    box-shadow: 0px 1px 15px 0px var(--box-shadow);
+    transition: 0.4s all ease-in-out;
+    z-index: 99;
+}
+
+.favourite_courses.active {
+    bottom: 0%;
+}
+
+.favourite_title {
+    font-size: 22px;
+    font-weight: 600;
+    display: block;
+    padding: 1rem 3rem;
+}
+
+.favourite_cards {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 30px;
+    max-height: 250px;
+    overflow: auto;
+    padding: 1rem 3rem;
+}
+
+.favourite_card {
+    display: grid;
+    grid-template-rows: 100px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px var(--box-shadow);
+    transition: 0.2s all;
+    color: var(--body-text);
+}
+
+.favourite_card:hover {
+    transform: translateY(-0.25em);
+}
+
+.favourite_card:active {
+    transform: translateY(0em);
+}
+
+.favourite_card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.favourite_content {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.favourite_course_title {
+    font-weight: 600;
+}
+
+.favourite_card .rating {
+    background-color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+    .favourite_cards {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media screen and (max-width: 821px) {
+    .favourite_cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .favourite_title {
+        box-shadow: 0px 1px 15px 0px var(--box-shadow);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .favourite_cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
