@@ -7,20 +7,19 @@ const favourite_title = document.querySelector(".favourite_title");
 const favourite_btn = document.querySelector(".favourite");
 
 const dark_btn = document.querySelector(".dark");
-let dark_theme = false
 
+localStorage.setItem("theme-data", "light");
 
 favourite_btn.addEventListener("click", () => {
     favourite_courses.classList.toggle("active");
 })
 
 dark_btn.addEventListener("click", () => {
-    if (!dark_theme) {
-        dark_theme = true;
+    if (localStorage.getItem("theme-data") == "light") {
         rootElement.setAttribute("data-theme", "dark");
-    } else {
-        dark_theme = false;
+        localStorage.setItem("theme-data", "dark");
+    } else if (localStorage.getItem("theme-data") == "dark") {
         rootElement.setAttribute("data-theme", "light");
+        localStorage.setItem("theme-data", "light");
     }
-
 })
