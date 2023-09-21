@@ -23,3 +23,9 @@ dark_btn.addEventListener("click", () => {
         localStorage.setItem("theme-data", "light");
     }
 })
+
+document.addEventListener("click", (event) => {
+    if(event.target.classList.contains("select-btn-text")){
+        event.target.closest('.select-container').classList.toggle("active");
+    }
+})
