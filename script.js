@@ -1,4 +1,5 @@
-'use strict'
+'use strict';
+
 const rootElement = document.documentElement;
 
 const favourite_courses = document.querySelector(".favourite_courses");
@@ -21,15 +22,15 @@ dark_btn.addEventListener("click", () => {
         localStorage.setItem("theme-data", "light");
     }
 })
-window.addEventListener('load', () => {
-    const savedTheme = localStorage.getItem('theme-data');
-    if (savedTheme) {
-        document.documentElement.setAttribute('data-theme', savedTheme);
-    } else {
-        rootElement.setAttribute("data-theme", "light");
-        localStorage.setItem("theme-data", "light");
-    }
-});
+
+// Remove the window 'load' event listener
+
+// Check for saved theme when the page loads
+const savedTheme = localStorage.getItem('theme-data');
+if (savedTheme) {
+    document.documentElement.setAttribute('data-theme', savedTheme);
+}
+
 document.addEventListener("click", (event) => {
     if (event.target.classList.contains("select-btn-text")) {
         event.target.closest('.select-container').classList.toggle("active");
