@@ -25,6 +25,9 @@ window.addEventListener('load', () => {
     const savedTheme = localStorage.getItem('theme-data');
     if (savedTheme) {
         document.documentElement.setAttribute('data-theme', savedTheme);
+    } else {
+        rootElement.setAttribute("data-theme", "light");
+        localStorage.setItem("theme-data", "light");
     }
 });
 document.addEventListener("click", (event) => {
